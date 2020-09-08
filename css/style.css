@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(http://cdn.rawgit.com/young-ha/webfont-archive/master/css/NaumGothic.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", 'NaumGothic', Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: #6e6a67;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.toggle {
+    display: none;
+}
+
+.logo {
+    outline: none;
+    text-decoration: none;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    transition: 0.6s;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    margin: 0 20px;
+    transition: 0.6s;
+}
+
+.fas {
+    font-size: 30px;
+}
+
+.sticky {
+    background: #fff;
+    padding: 30px 50px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.sticky .logo {
+    color: black;
+}
+
+.sticky ul,
+.sticky ul li,
+.sticky ul li a {
+    color: black;
+}
+
+.inner {
+    padding-top: 120px;
+}
+
+.left,
+.right .content .wrapper {
+    display: flex;
+    flex-direction: column
+}
+
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 45%;
+    color: white;
+    padding: 200px 0 70px 70px;
+}
+
+.left h1 {
+    font-size: 40px;
+    width: 60%;
+    letter-spacing: 5px
+}
+
+.left h3,
+p {
+    font-size: 20px;
+    width: 80%;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.left p {
+    font-size: 13px
+}
+
+.right {
+    margin-left: 45%;
+}
+
+.right .content {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 5%, transparent, transparent, transparent, transparent)#f58320;
+    /*#f58320; 1bced1;*/
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+}
+
+.right .content .wrapper {
+    width: 80%;
+}
+
+.right .content .wrapper img {
+    width: auto;
+    height: auto;
+    max-width: 330px;
+    box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, .06), inset 0 0 0 1px rgba(0, 0, 0, .2)
+}
+
+.right .content .wrapper .content__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px
+}
+
+.right .content .wrapper .content__header h4 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.right .content .wrapper .content__header h5 {
+    letter-spacing: 1px
+}
+
+@media (max-width: 839px) and (min-width: 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        padding: 40px 50px;
+    }
+    header .logo {
+        font-size: 20px;
+    }
+    header ul li .fas {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 599px) and (min-width: 0) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        padding: 30px 40px;
+    }
+    header .logo {
+        font-size: 30px;
+    }
+    header ul li .fas {
+        font-size: 20px;
+    }
+    .sticky {
+        padding: 30px 40px;
+    }
+    body .inner {
+        display: flex;
+        flex-direction: column;
+    }
+    body .inner .left {
+        padding-top: 60px;
+        position: relative;
+    }
+    body .inner .right {
+        margin: 0;
+    }
+}
